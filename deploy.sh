@@ -3,8 +3,6 @@
 # 发生错误时终止
 set -e
 
-
-
 # 构建
 npm run build
 
@@ -23,6 +21,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # 如果你要部署在 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:whjin/vite-vue3-app.git main:gh-pages
+git push -f git@github.com:whjin/vue-vite-app.git main:gh-pages
 
 cd -

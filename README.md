@@ -1,7 +1,47 @@
 # Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### 根目录下新建deploy.sh
+```
+#!/usr/bin/env sh
 
-## Recommended IDE Setup
+# 发生错误时终止
+set -e
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# 构建
+npm run build
+
+# 进入构建文件夹
+cd dist
+
+# 如果你要部署到自定义域名
+# echo 'www.example.com' > CNAME
+
+git init
+git checkout -b main
+git add -A
+git commit -m 'deploy'
+
+# 如果你要部署在 https://<USERNAME>.github.io
+# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
+
+# 如果你要部署在 https://<USERNAME>.github.io/<REPO>
+git push -f git@github.com:whjin/vue-vite-app.git main:gh-pages
+
+cd -
+```
+
+### 配置vite.config.js 
+
+```
+export default defineConfig({
+  base: './',
+});
+```
+
+### 配置index.html
+
+```
+<link rel="icon" type="image/svg+xml" href="./vite.svg" />
+
+<script type="module" src="./src/main.js"></script>
+```
