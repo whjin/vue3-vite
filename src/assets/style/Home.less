@@ -4,18 +4,48 @@
   box-sizing: border-box;
   .home-wrapper {
     display: flex;
+    flex-wrap: wrap;
     margin: 8px;
     .item-box {
-      width: 200px;
-      height: 150px;
-      border: 1px dashed #ccc;
+      min-width: 300px;
+      width: 300px;
+      height: 200px;
+      box-sizing: border-box;
+      border: 2px dashed #ccc;
       margin-right: 8px;
       margin-bottom: 8px;
+      overflow: auto;
+      border-radius: 8px;
+      .counter-wrapper {
+        text-align: center;
+        button {
+          width: fit-content;
+          cursor: pointer;
+          margin-bottom: 4px;
+        }
+      }
+      .student-wrapper {
+        padding: 12px;
+        ul {
+          list-style: none;
+          margin: 4px 0;
+          padding: 0;
+        }
+      }
+      .parent-wrapper {
+        padding: 8px;
+        font-size: 14px;
+        .child-wrapper {
+          span {
+            color: goldenrod;
+            display: inline-block;
+            word-break: break-all;
+          }
+        }
+      }
     }
-    .counter {
-      text-align: center;
-      display: table;
-      vertical-align: middle;
-    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
