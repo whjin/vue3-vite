@@ -9,7 +9,7 @@
 import { inject } from 'vue';
 
 let msg = inject('msg');
-let inputVal = inject('inputVal')
+let inputVal = inject('inputVal');
 </script>
 
 <style></style>
