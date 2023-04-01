@@ -2,7 +2,7 @@
   <div class="parent-wrapper">
     <input type="text" v-model="inputVal">
     <Child />
-    <Refs ref="msgRef"></Refs>
+    <Refs ref="msgRef" :message="message" @change="msgChange"></Refs>
   </div>
 </template>
 
@@ -18,6 +18,14 @@ let inputVal = ref("vue3");
 provide('inputVal', inputVal);
 
 const msgRef = ref(null);
+
+let message = ref('初始message，点击变更');
+
+const msgChange = (msg) => {
+  message.value = msg;
+  
+};
+
 onMounted(() => {
   msgRef.value.btn();
 })

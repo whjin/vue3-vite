@@ -6,6 +6,7 @@
       <span>响应值：{{ watchNum }}</span>
     </div>
     <button @click="watchEffectBtn">watchEffect数据监听</button>
+    <button @click="messageChange">{{ message }}</button>
   </div>
 </template>
 
@@ -31,7 +32,18 @@ const watchEffectBtn = () => {
 };
 watchEffect(() => {
   watchNum.value = num.value + 2;
-})
+});
+
+defineProps({
+  message: String,
+});
+
+const emit = defineEmits(['change']);
+
+const messageChange = () => {
+  emit('change', '变更message，defineEmits');
+}
+
 </script>
 
 <style></style>
