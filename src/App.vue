@@ -1,11 +1,11 @@
 <template>
   <div class="app">
-    <Home />
+    <Index />
   </div>
 </template>
 
 <script setup>
-import Home from "./components/Home.vue";
+import Index from "./pages/index.vue"
 </script>
 
 <style scoped></style>
