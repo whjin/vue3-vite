@@ -1,4 +1,4 @@
-# Vue 3 + Vite
+# Vue3 + Vite
 
 ### 根目录下新建deploy.sh
 ```

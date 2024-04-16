@@ -10,7 +10,7 @@ npm run build
 cd dist
 
 # 如果你要部署到自定义域名
-# echo 'www.example.com' > CNAME
+echo '40274iiya825.vicp.fun' > CNAME
 
 git init
 git checkout -b main
@@ -21,6 +21,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # 如果你要部署在 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:whjin/vue-vite-app.git main:gh-pages
+git push -f git@github.com:whjin/vue3-vite.git main:gh-pages
 
 cd -
