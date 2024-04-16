@@ -10,7 +10,7 @@ npm run build
 cd dist
 
 # 如果你要部署到自定义域名
-echo '40274iiya825.vicp.fun' > CNAME
+# echo 'www.baidu.com' > CNAME
 
 git init
 git checkout -b main
