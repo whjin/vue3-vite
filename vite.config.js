@@ -4,10 +4,8 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({ mode }) => {
-  let base = mode == 'production' ? '/vue3-vite/' : './';
-
   return {
-    base,
+    base: mode == 'production' ? '/vue3-vite/' : './',
     plugins: [
       vue(),
     ],
