@@ -12,7 +12,7 @@ git commit -m "提交更新main分支"
 git push origin main
 
 # 进入dist文件夹
-cd dist
+cd "./dist"
 
 ls
 
@@ -26,5 +26,5 @@ echo "按任意键关闭"
 read -n 1
 
 # 关闭sh脚本
-# exit 0
+exit 0
 
