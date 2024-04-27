@@ -12,19 +12,13 @@ git commit -m "提交更新main分支"
 git push origin main
 
 # 进入dist文件夹
-cd "./dist"
-
-ls
+cd dist
 
 # 提交gh-pages主分支
 git add .
 git commit -m "提交部署gh-pages分支"
 git push origin gh-pages
 
-# 任意键退出
-echo "按任意键关闭"
-read -n 1
-
-# 关闭sh脚本
-exit 0
+# 退出
+cd -
 
