@@ -26,5 +26,5 @@ echo "按任意键关闭"
 read -n 1
 
 # 关闭sh脚本
-exit 0
+# exit 0
 
