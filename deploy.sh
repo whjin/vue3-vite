@@ -21,5 +21,10 @@ git add .
 git commit -m "提交部署gh-pages分支"
 git push origin gh-pages
 
-# 退出
-# cd -
+# 任意键退出
+echo "按任意键关闭"
+read -n 1
+
+# 关闭sh脚本
+exit 0
+
