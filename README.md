@@ -4,7 +4,7 @@
 
 > 20.9.0
 
-### 配置 vite.config.js
+## 配置 vite.config.js
 
 ```vite.config.js
 export default defineConfig(({ mode }) => {
@@ -22,7 +22,17 @@ export default defineConfig(({ mode }) => {
 });
 ```
 
-### 配置 index.html
+## 部署
+```sh
+npm install -D gh-pages
+
+package.json 配置 "deploy": "gh-pages -d dist"
+
+npm run build
+npm run deploy
+```
+
+## 配置 index.html
 
 ```html
 <link rel="icon" href="/favicon.ico" />
@@ -30,7 +40,7 @@ export default defineConfig(({ mode }) => {
 <script type="module" src="/src/main.js"></script>
 ```
 
-# docx-preview 配置参数
+## docx-preview 配置参数
 
 |            参数             |  类型   | 默认值 | 说明                |
 | :-------------------------: | :-----: | :----: | ------------------- |

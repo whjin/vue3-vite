@@ -31,7 +31,6 @@ export default {
     });
 
     const { title } = toRefs(props);
-    console.log('1111111111111');
 
     return { count, plusOne, increment };
   },
