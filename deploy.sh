@@ -1,26 +1,20 @@
 #!/usr/bin/env sh
 
-git checkout main
-
 # 构建
 npm run build
 
+cd dist
+
+cp index.html 404.html
+
 # 提交main主分支
-git pull origin main
-git add .
+git add -A
 git commit -m "提交更新main分支"
 git push origin main
 
-# 切换分支
-git checkout gh-pages
+git push -g git@github.com:whjin/vue3-vite.git gh-pages
 
-# 提交gh-pages主分支
-git pull origin gh-pages
-git add .
-git commit -m "提交部署gh-pages分支"
-git push origin gh-pages
-
-git checkout main
+cd -
 
 # 按任意键关闭
 echo "按任意键关闭"
