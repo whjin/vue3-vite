@@ -1,8 +1,5 @@
 #!/usr/bin/env sh
 
-# 发生错误时终止
-set -e
-
 # 构建
 echo "开始构建项目..."
 npm run build
