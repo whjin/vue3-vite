@@ -1,9 +1,11 @@
 # Vue3 + Vite
 
-## Node版本
+## Node 版本
+
 > 20.9.0
 
-### 配置vite.config.js 
+### 配置 vite.config.js
+
 ```vite.config.js
 export default defineConfig(({ mode }) => {
   return {
@@ -20,14 +22,16 @@ export default defineConfig(({ mode }) => {
 });
 ```
 
-### 配置index.html
+### 配置 index.html
+
 ```html
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.ico" />
 
 <script type="module" src="/src/main.js"></script>
 ```
 
 ### 一键提交部署
+
 ```shell
 #!/usr/bin/env sh
 
@@ -56,4 +60,10 @@ read -n 1
 
 # 关闭sh脚本
 exit 0
-``
+```
+
+# docx-preview 配置参数
+
+|   参数    |  类型  | 默认值 | 说明                |
+| :-------: | :----: | :----: | ------------------- |
+| className | string | 'docx' | 自定义 CSS 类名前缀 |

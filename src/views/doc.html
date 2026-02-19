@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc Preview</title>
+  </head>
+  <body>
+    <h2>在线预览Doc文档</h2>
+    <input type="file" id="fileInput" accept=".docx" />
+    <div id="preview" class="preview">请上传.docx文件</div>
+    <style>
+      .preview {
+        height: 600px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        overflow-y: auto;
+      }
+    </style>
+    <script type="module">
+      import { renderAsync } from 'https://cdn.jsdelivr.net/npm/docx-preview@0.3.6/+esm';
+
+      document.getElementById('fileInput').addEventListener('change', async e => {
+        const file = e.target.files[0];
+        if (file) {
+          const previewDiv = document.getElementById('preview');
+          previewDiv.innerHTML = '正在加载文档...';
+
+          try {
+            await renderAsync(file, previewDiv, null, {
+              className: 'docx-preview',
+              inWrapper: true,
+              breakPages: false,
+              renderHeaders: true,
+              renderFooters: true,
+              useBase64URL: false,
+            });
+            console.log('文档加载成功');
+          } catch (error) {
+            console.error('加载文档失败:', error);
+            previewDiv.innerHTML = '加载文档失败，请检查文档格式：' + error.message;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
