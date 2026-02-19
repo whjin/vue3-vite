@@ -1,12 +1,16 @@
 #!/usr/bin/env sh
 
+if ["$(git branch --show-current)" != "main"]; then
+  git checkout main
+fi
+
 # 构建
 npm run build
 
 # 提交main主分支
 git add .
 git commit -m "提交更新main分支"
-git push origin main
+git push
 
 # 切换分支
 git checkout gh-pages
