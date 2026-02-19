@@ -12,7 +12,7 @@ git add -A
 git commit -m "提交更新main分支"
 git push origin main
 
-git push -f git@github.com:whjin/vue3-vite.git master:gh-pages
+git push -f git@github.com:whjin/vue3-vite.git main:gh-pages
 
 cd -
 
