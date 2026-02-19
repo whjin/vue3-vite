@@ -8,11 +8,10 @@ git add .
 git commit -m "提交更新main分支"
 git push origin main
 
-# 进入dist文件夹
-cd dist
+# 切换分支
+git checkout gh-pages
 
 # 提交gh-pages主分支
-git pull origin gh-pages
 git add .
 git commit -m "提交部署gh-pages分支"
 git push origin gh-pages

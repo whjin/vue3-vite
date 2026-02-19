@@ -10,19 +10,19 @@
   </div>
 </template>
 
-<script >
-import { ref, toRef, toRefs, computed } from "vue";
-import { RouterLink } from "vue-router";
-import { ElButton } from "element-plus";
+<script>
+import { ref, toRef, toRefs, computed } from 'vue';
+import { RouterLink } from 'vue-router';
+import { ElButton } from 'element-plus';
 
 export default {
   props: {
     title: String,
   },
-  setup (props) {
+  setup(props) {
     const count = ref(0);
 
-    function increment () {
+    function increment() {
       count.value++;
     }
 
@@ -31,15 +31,15 @@ export default {
     });
 
     const { title } = toRefs(props);
-    console.log(title.value);
+    console.log('1111111111111');
 
     return { count, plusOne, increment };
   },
   methods: {
-    changeTitle () {
-      this.$emit("change-title");
-    }
-  }
+    changeTitle() {
+      this.$emit('change-title');
+    },
+  },
 };
 </script>
 
