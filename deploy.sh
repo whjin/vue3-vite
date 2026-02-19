@@ -4,6 +4,7 @@
 npm run build
 
 # 提交main主分支
+git pull
 git add .
 git commit -m "提交更新main分支"
 git push origin main
@@ -12,6 +13,7 @@ git push origin main
 cd dist
 
 # 提交gh-pages主分支
+git pull origin gh-pages
 git add .
 git commit -m "提交部署gh-pages分支"
 git push origin gh-pages
