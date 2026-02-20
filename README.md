@@ -9,7 +9,7 @@
 ```vite.config.js
 export default defineConfig(({ mode }) => {
   return {
-    base: mode == 'production' ? '/vue3-vite/' : './',
+    base: mode == 'production' ? '/vite-vue3/' : './',
     plugins: [
       vue(),
     ],
@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => {
 ```
 
 ## 部署
+
 ```sh
 npm install -D gh-pages
 
